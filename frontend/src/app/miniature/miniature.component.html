@@ -1,0 +1,11 @@
+<div class = "content">
+    <div class = "center">
+        <div *ngFor = "let miniatura of miniatureShow">
+            <p>{{ miniatura.author }}</p>
+            <img [src] = "miniatura.download_url" width="300" height="300">
+            <br>
+            <button class="button">BUY</button>
+            <p>Price: $420,69</p>
+        </div>
+    </div>
+</div>
