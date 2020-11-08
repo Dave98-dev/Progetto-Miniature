@@ -1,0 +1,8 @@
+<div *ngIf="!loggedIn; else elseBlock">
+    <button (click) = "signInWithGoogle()">Google Login</button>
+</div>
+<ng-template #elseBlock>
+    <img height="30" [src] = "user.photoUrl">
+    {{user.name}}
+    <button (click) = "signOutFromGoogle()">Sign Out</button>
+</ng-template>
