@@ -20,6 +20,7 @@ import {
   AmazonLoginProvider,
   VKLoginProvider
 } from 'angularx-social-login';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import {
     MatTabsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    SocialLoginModule
+    SocialLoginModule, FormsModule
   ],
   providers: [
     {

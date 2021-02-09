@@ -7,11 +7,20 @@ import { Shop } from '../models/shop.model';
   providedIn: 'root'
 })
 export class DataService {
-
+  postShop(shopModel: Shop) {
+    const url = environment.API_URL;
+    return this.http.post(`${url}/shop`,shopModel);
+  }
+  
   constructor(protected http:HttpClient) { }
-
+  
   getMiniatures():Observable<any>{
     return this.http.get("https://picsum.photos/v2/list");
+  }
+  getShops():Observable<Shop[]> {
+    const url = environment.API_URL;
+
+    return this.http.get<Shop[]>(`${url}/shop`);
   }
 
   getSingleShop(shopCode:string):Observable<Shop>{
@@ -20,4 +29,5 @@ export class DataService {
 
     return this.http.get<Shop>(`${url}/shop/${shopCode}`);
   }
+
 }

@@ -1,4 +1,5 @@
 export class Shop{
+    author:string;
     code:string;
     title:string;
     description:string;

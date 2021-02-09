@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -10,15 +11,11 @@ export class MiniatureComponent implements OnInit {
 
   constructor(protected data:DataService) { }
 
-  miniatureAll:any[];
-  miniatureShow:any[];
-
+  shops:any[];
   ngOnInit(): void {
-    this.data.getMiniatures().subscribe((miniature)=>{
-        this.miniatureAll = miniature;
-        this.miniatureShow= this.miniatureAll;
-      }
-    );
+    this.data.getShops().subscribe((shops)=>{
+      this.shops = shops;
+    });
   }
 
 }

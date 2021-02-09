@@ -4,7 +4,10 @@
     justify-content: center;
 }
 .center{
-    max-width: 600px;
     text-align: center;
+    position: relative;
+}
+img{
+    height: 300px;
     position: relative;
 }

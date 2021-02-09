@@ -1,11 +1,9 @@
 <div class = "content">
     <div class = "center">
-        <div *ngFor = "let miniatura of miniatureShow">
-            <p>{{ miniatura.author }}</p>
-            <img [src] = "miniatura.download_url" width="300" height="300">
+        <div *ngFor = "let shop of shops">
+            <p>{{ shop.title }}</p>
+                <a [routerLink] = "'shop/'+shop.code" ><img [src] = "shop.bannerUrl"></a>
             <br>
-            <button class="button">BUY</button>
-            <p>Price: $420,69</p>
         </div>
     </div>
 </div>
